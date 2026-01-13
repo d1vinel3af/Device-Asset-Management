@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'deviceassetmanagement/css/style.css' %}">
+    
+    <title>{{ title }}</title>
+
+    {% block 'style' %}
+    {% endblock %}
+
+</head>
+<body>
+    <header class="header">
+        {% include 'includes/navbar.html' %}
+    </header>
+    
+    <div class="container-fluid">
+        {% block 'content' %}
+        {% endblock %}
+    </div>
+    
+
+    {% include 'includes/footer.html' %}
+
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% block 'script' %}
+    {% endblock %}
+</body>
+</html>
