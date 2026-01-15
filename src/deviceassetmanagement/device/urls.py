@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import test
+from .views import DeviceView
 
 urlpatterns = [
-    path("dashboard/", test, name="test"),
+    path("dashboard/", DeviceView.as_view(), name="dashboard"),
 ]
