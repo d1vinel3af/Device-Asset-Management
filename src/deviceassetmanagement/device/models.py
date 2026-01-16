@@ -82,7 +82,7 @@ class Device(models.Model):
         verbose_name_plural = "Устройства"
 
     def __str__(self):
-        return f"{self.device_type}: {self.inventory_number}"
+        return f"{self.device_type}:{self.serial_number}:{self.model}"
 
 
 

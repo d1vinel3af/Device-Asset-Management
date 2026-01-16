@@ -1,8 +1,19 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
 {% block 'content' %}
-<div class="row">
-    <div class="col-sm-6 mt-2">
-        {% include 'device/includes/device_list.html' %}
+<div class="container-fluid mt-4">
+
+    <!-- Заголовок и поиск -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Список устройств</h2>
+        {% include "device/includes/search_form.html" %}
     </div>
+
+    <!-- Таблица устройств -->
+    {% include "device/includes/device_list.html" %}
+
+    <!-- Пагинация -->
+    {% include "device/includes/pagination.html" %}
+
 </div>
 {% endblock %}
